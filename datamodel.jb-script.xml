@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itop_design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.6">
+<!-- 
+ * @copyright   Copyright (C) 2020 Jeffrey Bostoen
+ * @license     https://www.gnu.org/licenses/gpl-3.0.en.html
+-->
+	<classes>
+		<class id="Script" _delta="define">
+			<parent>FunctionalCI</parent>
+			<properties>
+				<category>bizmodel,searchable,structure</category>
+				<abstract>false</abstract>
+				<key_type>autoincrement</key_type>
+				<db_table>scripts</db_table>
+				<db_key_field>id</db_key_field>
+				<naming>
+					<attributes>
+						<attribute id="name"/>
+					</attributes>
+				</naming>
+				<order>
+					<columns>
+						<column id="name" ascending="true"/>
+					</columns>
+				</order>
+				<reconciliation>
+					<attributes>
+						<attribute id="name"/>
+					</attributes>
+				</reconciliation>
+				<icon>images/script.png</icon>
+			</properties>
+			<fields>
+				<field id="type" xsi:type="AttributeEnum">
+					<sql>type</sql>
+					<is_null_allowed>false</is_null_allowed>
+					<default_value/>
+					<values>
+						<value id="batch">batch</value>
+						<value id="bash">bash</value>
+						<value id="powershell">powershell</value>
+						<value id="sql">sql</value>
+					</values>
+				</field>
+				<field id="filename" xsi:type="AttributeString">
+					<sql>filename</sql>
+					<is_null_allowed>false</is_null_allowed>
+					<default_value/>
+				</field>
+				<field id="last_updated" xsi:type="AttributeDate">
+					<sql>last_updated</sql>
+					<is_null_allowed>true</is_null_allowed>
+					<default_value/>
+				</field>
+				<field id="github_url" xsi:type="AttributeString">
+					<sql>github_url</sql>
+					<is_null_allowed>true</is_null_allowed>
+					<default_value/>
+				</field>
+			</fields>
+			<methods/>
+			<presentation>
+				<details>
+					<items>
+						<item id="org_id">
+							<rank>1</rank>
+						</item>
+						<item id="name">
+							<rank>11</rank>
+						</item>
+						<item id="description">
+							<rank>12</rank>
+						</item>
+						<item id="type">
+							<rank>13</rank>
+						</item>
+						<item id="filename">
+							<rank>14</rank>
+						</item>
+						<item id="last_updated">
+							<rank>21</rank>
+						</item>
+						<item id="github_url">
+							<rank>31</rank>
+						</item>
+					</items>
+				</details>
+				<search>
+					<items>
+						<item id="org_id">
+							<rank>1</rank>
+						</item>
+						<item id="name">
+							<rank>11</rank>
+						</item>
+						<item id="description">
+							<rank>12</rank>
+						</item>
+						<item id="type">
+							<rank>13</rank>
+						</item>
+					</items>
+				</search>
+				<default_search>
+					<items>
+						<item id="org_id">
+							<rank>1</rank>
+						</item>
+						<item id="name">
+							<rank>11</rank>
+						</item>
+						<item id="description">
+							<rank>12</rank>
+						</item>
+						<item id="type">
+							<rank>13</rank>
+						</item>
+					</items>
+				</default_search>
+				<list>
+					<items>
+						<item id="org_id">
+							<rank>1</rank>
+						</item>
+						<item id="name">
+							<rank>11</rank>
+						</item>
+						<item id="description">
+							<rank>12</rank>
+						</item>
+						<item id="type">
+							<rank>13</rank>
+						</item>
+					</items>
+				</list>
+			</presentation>
+		</class>
+
+	</classes>
+	
+	<menus>
+		<menu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ConfigManagementOverview" xsi:type="DashboardMenuNode">
+		  <definition>
+			<cells>
+			  <cell id="2">
+				<dashlets>
+				  <dashlet id="Scripts" xsi:type="DashletBadge" _delta="define">
+					<rank>101</rank>
+					<class>Script</class>
+				  </dashlet>
+				</dashlets>
+			  </cell>
+			</cells>
+		  </definition>
+		</menu>
+	</menus>	
+	
+</itop_design>
+
+
