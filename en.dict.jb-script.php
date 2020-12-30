@@ -20,6 +20,10 @@ Dict::Add('EN US', 'English', 'English', array(
 	'Class:Script/Attribute:filename+' => 'Full file name indicating where this script is stored',
 	'Class:Script/Attribute:last_updated' => 'Last updated',
 	'Class:Script/Attribute:github_url' => 'GitHub URL',
+	'Class:Script/Attribute:status' => 'Status',
+	'Class:Script/Attribute:status/Value:implementation' => 'Implementation',
+	'Class:Script/Attribute:status/Value:obsolete' => 'Obsolete',
+	'Class:Script/Attribute:status/Value:production' => 'Production',
 	
 ));
 

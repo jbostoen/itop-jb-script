@@ -20,6 +20,10 @@ Dict::Add('NL NL', 'Dutch', 'Dutch', array(
 	'Class:Script/Attribute:filename+' => 'Volledige bestandsnaam',
 	'Class:Script/Attribute:last_updated' => 'Laatst aangepast',
 	'Class:Script/Attribute:github_url' => 'GitHub URL',
+	'Class:Script/Attribute:status' => 'Status',
+	'Class:Script/Attribute:status/Value:implementation' => 'Implementatie',
+	'Class:Script/Attribute:status/Value:obsolete' => 'Buiten dienst',
+	'Class:Script/Attribute:status/Value:production' => 'Productie',
 	
 ));
 

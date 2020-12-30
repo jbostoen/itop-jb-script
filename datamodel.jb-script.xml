@@ -57,6 +57,16 @@
 					<is_null_allowed>true</is_null_allowed>
 					<default_value/>
 				</field>
+				<field id="status" xsi:type="AttributeEnum">
+					<sql>status</sql>
+					<is_null_allowed>true</is_null_allowed>
+					<default_value/>
+					<values>
+						<value id="implementation">implementation</value>
+						<value id="production">production</value>
+						<value id="obsolete">obsolete</value>
+					</values>
+				</field>
 			</fields>
 			<methods/>
 			<presentation>
@@ -79,6 +89,9 @@
 						</item>
 						<item id="last_updated">
 							<rank>21</rank>
+						</item>
+						<item id="status">
+							<rank>22</rank>
 						</item>
 						<item id="github_url">
 							<rank>31</rank>
@@ -131,6 +144,9 @@
 						<item id="type">
 							<rank>13</rank>
 						</item>
+						<item id="status">
+							<rank>22</rank>
+						</item>
 					</items>
 				</list>
 			</presentation>
@@ -142,7 +158,7 @@
 		<menu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ConfigManagementOverview" xsi:type="DashboardMenuNode">
 		  <definition>
 			<cells>
-			  <cell id="2">
+			  <cell id="4">
 				<dashlets>
 				  <dashlet id="Scripts" xsi:type="DashletBadge" _delta="define">
 					<rank>101</rank>
@@ -154,6 +170,12 @@
 		  </definition>
 		</menu>
 	</menus>	
+	
+	<group id="Configuration">
+        <classes>
+          <class id="SSID" _delta="define"/>
+		</classes>
+	</group>
 	
 </itop_design>
 
