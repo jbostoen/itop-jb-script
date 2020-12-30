@@ -160,7 +160,7 @@
 			<cells>
 			  <cell id="4">
 				<dashlets>
-				  <dashlet id="Scripts" xsi:type="DashletBadge" _delta="define">
+				  <dashlet id="scripts" xsi:type="DashletBadge" _delta="define">
 					<rank>101</rank>
 					<class>Script</class>
 				  </dashlet>
@@ -173,7 +173,7 @@
 	
 	<group id="Configuration">
         <classes>
-          <class id="SSID" _delta="define"/>
+          <class id="Script" _delta="define"/>
 		</classes>
 	</group>
 	
