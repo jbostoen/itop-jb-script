@@ -42,13 +42,13 @@
 						<value id="sql">sql</value>
 					</values>
 				</field>
-				<field id="filename" xsi:type="AttributeString">
-					<sql>filename</sql>
-					<is_null_allowed>false</is_null_allowed>
-					<default_value/>
-				</field>
 				<field id="last_updated" xsi:type="AttributeDate">
 					<sql>last_updated</sql>
+					<is_null_allowed>true</is_null_allowed>
+					<default_value/>
+				</field>
+				<field id="filename" xsi:type="AttributeString">
+					<sql>filename</sql>
 					<is_null_allowed>true</is_null_allowed>
 					<default_value/>
 				</field>
@@ -84,14 +84,14 @@
 						<item id="type">
 							<rank>13</rank>
 						</item>
-						<item id="filename">
-							<rank>14</rank>
-						</item>
 						<item id="last_updated">
 							<rank>21</rank>
 						</item>
 						<item id="status">
 							<rank>22</rank>
+						</item>
+						<item id="filename">
+							<rank>30</rank>
 						</item>
 						<item id="github_url">
 							<rank>31</rank>
